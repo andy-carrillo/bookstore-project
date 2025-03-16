@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element of the bookstore catalog -->
 <catalog xmlns="http://www.onlinebookstore.com/catalog">
-  <book id="b1" available="true">
-    <title>The Great Gatsby</title>
-    <publicationYear>1925</publicationYear>
+
+  <!-- First book entry -->
+  <book id="b001" available="true">
+    <title>The Great Gatsby</title> <!-- Book title -->
+    <publicationYear>1925</publicationYear> <!-- Year of publication -->
+    
+    <!-- Author details -->
     <author>
       <firstName>F. Scott</firstName>
       <lastName>Fitzgerald</lastName>
     </author>
   </book>
-  <book id="b2" available="true">
+
+  <!-- Second book entry -->
+  <book id="b002" available="true">
     <title>To Kill a Mockingbird</title>
     <publicationYear>1960</publicationYear>
+    
     <author>
       <firstName>Harper</firstName>
       <lastName>Lee</lastName>
     </author>
   </book>
-  <book id="b3" available="false">
+
+  <!-- Third book entry -->
+  <book id="b003" available="false">
     <title>1984</title>
     <publicationYear>1949</publicationYear>
+    
     <author>
       <firstName>George</firstName>
       <lastName>Orwell</lastName>
     </author>
   </book>
+
 </catalog>
