@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Inventory</title>
+</head>
+<body>
+  <h1>Bookstore Inventory</h1>
+  <ul id="book-list"></ul>
+
+  <script>
+    // Fetch the JSON file
+    fetch('inventory.json')
+      .then(response => response.json())
+      .then(data => {
+        const bookList = document.getElementById('book-list');
+
+        data.books.forEach(book => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <strong>${book.title}</strong><br>
+            Author: ${book.author.firstName} ${book.author.lastName}<br>
+            Publication Year: ${book.publicationYear}<br>
+            Publisher: ${book.details.publisher}<br>
+            Page Count: ${book.details.pageCount}<br>
+            Available: ${book.details.available ? 'Yes' : 'No'}
+          `;
+          bookList.appendChild(li);
+        });
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+  </script>
+</body>
+</html>
